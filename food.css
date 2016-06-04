@@ -1,0 +1,53 @@
+html {
+	font-family: sans-serif;
+}
+
+.petcard {
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: center;
+	width: 25%;
+	background: rgba(0,0,0,.5);
+	color: rgba(255,255,255,1);
+	border: 5px solid rgba(0, 0, 139, .5);
+	border-radius: 5%;
+	text-align: center;
+}
+
+#imgBox {
+	display: block;
+	width: 80%;
+	margin: 0 auto;
+}
+
+#imgBox img {
+	height: 100%;
+	width: 100%;
+}
+
+.priceBox {
+	display: flex;
+	flex-flow: row wrap;
+}
+.priceBox h5 {
+	margin-left: 50%;	
+}
+
+.priceBox h6 {
+	width: 100%;
+	margin: 0;
+}
+
+.priceBox ul {
+	list-style: none;
+}
+
+.productPrice {
+	font-family: monospace;
+	color: rgba(0, 229, 1, 1.0);
+	font-weight: 600;
+}
+
+.productSize {
+	font-size: .9em;
+}
