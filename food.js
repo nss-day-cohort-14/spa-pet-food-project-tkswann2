@@ -33,12 +33,13 @@ function parseDogFoodJSON (progressEvent) {
 	var outputDiv = document.getElementById('output');
 	let parsedData = JSON.parse(progressEvent.target.responseText);
 	console.log(parsedData);
+	let newHTMLString = '';
 
 	for (var index = 0, l = parsedData.dog_brands.length; index < l; index++) {
 		var	value = parsedData.dog_brands[index];
 		let foodBrand = value.name;
 			console.log(foodBrand);
-			outputDiv.innerHTML += `<petcard class="petcard">
+			newHTMLString += `<petcard class="petcard">
 																				<header>
 																					<h3 id="foodBrand">${foodBrand}</h3>
 																				</header>
@@ -55,7 +56,7 @@ function parseDogFoodJSON (progressEvent) {
 				var foodTypeObj = value.types[j];
 				let foodType = value.types[j].type;
 				console.log(foodType);
-				outputDiv.innerHTML += `	<div class="priceBox">
+				newHTMLString += `	<div class="priceBox">
 																				<h6>${foodType}</h6>`;
 
 				for (var y = 0, z = foodTypeObj.volumes.length; y < z; y++) {
@@ -64,17 +65,16 @@ function parseDogFoodJSON (progressEvent) {
 					let foodPrice = foodPriceObj.price;
 					console.log(foodSize);
 					console.log(foodPrice);
-					outputDiv.innerHTML += `        <ul>
+					newHTMLString += `        <ul>
 																						<li class="productSize">${foodSize}</li>
 																						<li class="productPrice">${foodPrice}</li>
-																					</ul>
-																				</div>
-																								
-																				</info>
-																			</petcard>`;
+																					</ul>`;
 		  }
+		  newHTMLString += `</div>`;
 	  }
+	  newHTMLString += `</petcard>`;
 	}
+	outputDiv.innerHTML += newHTMLString;
 }
 
 
