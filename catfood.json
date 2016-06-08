@@ -1,7 +1,7 @@
 {
   "cat_brands": [
     {
-      "name": "Purrina",
+      "brand": "Purrina",
       "breeds": [
         {
           "breed": "Siamese",
@@ -106,7 +106,7 @@
       ]
     },
     {
-      "Brand": "Meow Meal",
+      "brand": "Meow Meal",
       "breeds": [
         {
           "breed": "Manx",
