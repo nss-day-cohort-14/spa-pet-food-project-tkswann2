@@ -107,8 +107,8 @@ function parseCatFoodJSON () {
 			htmlString += `</div>`;
 		}
 		htmlString += `</div>`;
-	  outputDiv.innerHTML += htmlString;
 	}
+	outputDiv.innerHTML += htmlString;
 }
 
 
