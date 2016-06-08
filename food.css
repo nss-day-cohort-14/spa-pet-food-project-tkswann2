@@ -2,6 +2,10 @@ html {
 	font-family: sans-serif;
 }
 
+/*#output {
+	display: flex;
+}*/
+
 .petcard {
 	display: flex;
 	flex-flow: column wrap;
